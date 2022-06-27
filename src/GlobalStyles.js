@@ -6,17 +6,10 @@ const styled = {createGlobalStyle};
 export default styled.createGlobalStyle`
   * {
     box-sizing: border-box;
+    font-family: Quicksand;
   }
 
-  body {
-    margin: 0;
-    font-size: 1.125rem;
-    font-family: sans-serif;
-  }
-
-  button,
-  input,
-  textarea {
-    font: inherit;
+  .font-link {
+    font-family: Quicksand, sans-serif;
   }
 `;
