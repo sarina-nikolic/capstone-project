@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+/* import React, {useState} from 'react';
 
 export default function Upload() {
   const [fileInputState, setFileInputState] = useState('');
@@ -49,4 +49,4 @@ export default function Upload() {
       )}
     </div>
   );
-}
+} 
