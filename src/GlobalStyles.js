@@ -6,7 +6,7 @@ const styled = {createGlobalStyle};
 export default styled.createGlobalStyle`
   * {
     box-sizing: border-box;
-    font-family: Quicksand;
+    font-family: Quicksand, sans-serif;
   }
 
   .font-link {

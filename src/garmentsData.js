@@ -1,8 +1,8 @@
-const data = [
+const garments = [
   {
     id: '1',
     image: '/images/bluejumper.jpg',
-    altIMG: 'blue jumper',
+    imgAltText: 'blue jumper',
     size: 'XS',
     color: 'navy',
     material: 'cotton',
@@ -11,7 +11,7 @@ const data = [
   {
     id: '2',
     image: '/images/blueskirt.jpg',
-    altIMG: 'blue skirt',
+    imgAltText: 'blue skirt',
     size: '164',
     color: 'navy',
     material: 'cotton',
@@ -20,7 +20,7 @@ const data = [
   {
     id: '3',
     image: '/images/stripedshirt.jpg',
-    altIMG: 'striped shirt',
+    imgAltText: 'striped shirt',
     size: '34',
     color: 'blue white striped',
     material: 'cotton',
@@ -29,7 +29,7 @@ const data = [
   {
     id: '4',
     image: '/images/whitetop.jpg',
-    altIMG: 'white top',
+    imgAltText: 'white top',
     size: 'XS',
     color: 'white',
     material: 'cotton',
@@ -37,4 +37,4 @@ const data = [
   },
 ];
 
-export default data;
+export default garments;

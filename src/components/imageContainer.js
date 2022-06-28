@@ -1,14 +1,12 @@
-import {useState} from 'react';
 import styled from 'styled-components';
 
-import data from '../imageData.js';
+import garments from '../garmentsData.js';
 
 function ImageContainer() {
-  const [image] = useState(data);
   return (
     <StyledBox>
-      {image.map(image => {
-        return <img key={image.id} src={image.image} alt={image.altIMG} />;
+      {garments.map(garment => {
+        return <img key={garment.id} src={garment.image} alt={garment.imgAltText} />;
       })}
     </StyledBox>
   );
