@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import data from '../imageData.js';
 
 function ImageContainer() {
-  const [image, setImage] = useState(data);
+  const [image] = useState(data);
   return (
     <StyledBox>
       {image.map(image => {
