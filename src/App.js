@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import ImageContainer from './components/ImageContainer';
+import ImageContainer from './components/imageContainer';
 
 export default function App() {
   return (
