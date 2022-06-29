@@ -2,12 +2,12 @@ import {render, screen} from '@testing-library/react';
 
 import ImageContainer from './components';
 
-describe('Render', () => {
+describe('rendering', () => {
   it('renders images', () => {
     render(<ImageContainer />);
 
-    const image = screen.getByLabelText('id');
+    const image = screen.getByLabelText('image');
 
-    expect(image).toHaveAttribute('id');
+    expect(image).toHaveAttribute('image');
   });
 });
