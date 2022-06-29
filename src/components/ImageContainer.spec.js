@@ -1,13 +1,14 @@
+import '@testing-library/jest-dom';
 import {render, screen} from '@testing-library/react';
 
-import ImageContainer from './components';
+import ImageContainer from './components/ImageContainer';
+import garments from './garmentsData.js';
 
-describe('rendering', () => {
-  it('renders images', () => {
+describe('rendering photos', () => {
+  it('renders all images', () => {
     render(<ImageContainer />);
-
-    const image = screen.getByLabelText('image');
-
-    expect(image).toHaveAttribute('image');
+    garments.forEach(garmentImage => {
+      expect(screen.getByText(garmentImage.name)).toBeInTheDocument();
+    });
   });
 });
