@@ -14,9 +14,14 @@ function ImageContainer() {
 
 export default ImageContainer;
 
-const StyledBox = styled.div`
-  margin: 2rem;
-  padding: 2rem;
+const StyledBox = styled.ul`
+  margin: 1rem;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: start;
+  align-content: start;
+  gap: 0.5rem;
 
   img {
     width: 100%;
