@@ -6,8 +6,10 @@ function ImageContainer() {
   return (
     <StyledBox>
       {garments.map(garment => {
-        return <img key={garment.id} src={garment.image} alt={garment.imgAltText} />;
+        return <img key={garment.id} src={garment.image} alt={garment.imgAltText} />
+        
       })}
+
     </StyledBox>
   );
 }

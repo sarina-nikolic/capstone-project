@@ -1,21 +1,16 @@
 import styled from 'styled-components';
 
+import GetUniqueValues from './components/Categories';
 import ImageContainer from './components/imageContainer';
 
 export default function App() {
   return (
     <AppContainer>
       <Title>My minimalist wardrobe</Title>
-
+      <GetUniqueValues />
       <ImageContainer />
     </AppContainer>
   );
-}
-
-function getUniqueValues(someArray) {
-  const uniqueValues = [...new Set(someArray.map(element => element.color))];
-  console.log(`uniqueValues: ${uniqueValues}`);
-  return uniqueValues;
 }
 
 const AppContainer = styled.main`
