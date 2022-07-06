@@ -9,7 +9,7 @@ import Item from './Item.js';
 //return uniqueValues(<StyledGetUniqueValues />);
 //}
 
-export default function GetUniqueValues() {
+export default function GetUniqueValues({garments}) {
   const [garmentList] = useState([]);
   const [colorList, setColorList] = useState();
   const [brandList, setBrandList] = useState();
@@ -21,14 +21,11 @@ export default function GetUniqueValues() {
     return garmentList.filter(item => item.color === colorList);
   }
   function getFilteredBrandList() {
-    if (!brandList) {
-      return garmentList;
-    }
     return garmentList.filter(item => item.brand === brandList);
   }
-  var filteredList = useMemo(getFilteredList, [colorList, garmentList]);
-  var filteredBrandList = useMemo(getFilteredBrandList, [brandList, garmentList]);
 
+  let filteredList = useMemo(getFilteredList, [colorList, garmentList]);
+  let filteredBrandList = useMemo(getFilteredBrandList, [brandList, garmentList]);
   function handleColorChange(event) {
     setColorList(event.target.value);
   }
@@ -64,6 +61,7 @@ export default function GetUniqueValues() {
           <Item {...element} key={index} />
         ))}
       </div>
+
     </StyledGetUniqueValues>
   );
 }
