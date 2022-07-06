@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-import garments from '../garmentsData';
-
 function ImageContainer({garments}) {
   return (
     <StyledBox>
