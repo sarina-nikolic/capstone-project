@@ -1,7 +1,7 @@
 import {useMemo, useState} from 'react';
 import styled from 'styled-components';
 
-import Categories from './components/Categories';
+import Categories from './components/categories';
 import ImageContainer from './components/imageContainer';
 import data from './garmentsData';
 
