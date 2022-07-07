@@ -2,7 +2,7 @@ import imageContainer from './imageContainer';
 
 export default {
   title: 'components/imageContainer',
-  cimponent: imageContainer,
+  component: imageContainer,
 };
 
 export const Default = () => <imageContainer />;
