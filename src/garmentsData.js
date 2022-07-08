@@ -1,7 +1,7 @@
 const garments = [
   {
     id: '1',
-    image: '/images/bluejumper.jpg',
+    image: '/bluejumper.jpg',
     imgAltText: 'blue jumper',
     size: 'XS',
     color: 'navy',
@@ -10,7 +10,7 @@ const garments = [
   },
   {
     id: '2',
-    image: '/images/blueskirt.jpg',
+    image: '../images/blueskirt.jpg',
     imgAltText: 'blue skirt',
     size: '164',
     color: 'navy',
@@ -19,7 +19,7 @@ const garments = [
   },
   {
     id: '3',
-    image: '/images/stripedshirt.jpg',
+    image: 'src/images/stripedshirt.jpg',
     imgAltText: 'striped shirt',
     size: '34',
     color: 'blue white striped',
@@ -28,7 +28,7 @@ const garments = [
   },
   {
     id: '4',
-    image: '/images/whitetop.jpg',
+    image: './src/images/whitetop.jpg',
     imgAltText: 'white top',
     size: 'XS',
     color: 'white',
