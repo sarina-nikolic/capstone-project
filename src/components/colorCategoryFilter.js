@@ -13,8 +13,6 @@ export default function ColorCategoryFilter({onColorChange}) {
 }
 
 const StyledCategories = styled.form`
-  margin: 0.5rem;
-  padding: 0.5rem;
   display: flex;
   align-items: row;
 `;

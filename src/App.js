@@ -43,9 +43,10 @@ export default function App() {
   return (
     <AppContainer>
       <Title>My minimalist wardrobe</Title>
+      <ul>
       <ColorCategoryFilter onColorChange={handleColorChange} />
       <BrandCategoryFilter onBrandChange={handleBrandChange} />
-
+      </ul>
       <ImageContainer garments={filteredColorList} favorite={favorite} onAddToFavorites={addToFavorites} />
     </AppContainer>
   );
