@@ -1,7 +1,7 @@
 const garments = [
   {
     id: '1',
-    image: '/bluejumper.jpg',
+    image: '/images/bluejumper.jpg',
     imgAltText: 'blue jumper',
     size: 'XS',
     color: 'navy',
@@ -10,7 +10,7 @@ const garments = [
   },
   {
     id: '2',
-    image: '../images/blueskirt.jpg',
+    image: '/images/blueskirt.jpg',
     imgAltText: 'blue skirt',
     size: '164',
     color: 'navy',
@@ -19,16 +19,16 @@ const garments = [
   },
   {
     id: '3',
-    image: 'src/images/stripedshirt.jpg',
+    image: '/images/stripedshirt.jpg',
     imgAltText: 'striped shirt',
     size: '34',
-    color: 'blue white striped',
+    color: 'lightblue',
     material: 'cotton',
     brand: 'Ralph Lauren',
   },
   {
     id: '4',
-    image: './src/images/whitetop.jpg',
+    image: '/images/whitetop.jpg',
     imgAltText: 'white top',
     size: 'XS',
     color: 'white',

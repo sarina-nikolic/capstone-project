@@ -1,29 +1,37 @@
 import styled from 'styled-components';
 
-function ImageContainer({garments}) {
+import BookmarkButton from './bookmarkButton';
+
+export default function ImageContainer({garments}) {
   return (
-    <StyledBox>
-      {garments.map(garment => {
-        return <img key={garment.id} src={garment.image} alt={garment.imgAltText} />;
-      })}
-    </StyledBox>
+    <Section>
+      <StyledBox>
+        {garments.map(garment => {
+          return (
+            <>
+              <img key={garment.id} src={garment.image} alt={garment.imgAltText} />
+              <BookmarkButton />
+            </>
+          );
+        })}
+      </StyledBox>
+    </Section>
   );
 }
 
-export default ImageContainer;
+const Section = styled.div`
+  position: relative;
+`;
 
-const StyledBox = styled.ul`
-  margin: 1rem;
-  padding: 1rem;
+const StyledBox = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: start;
-  align-content: start;
   gap: 0.5rem;
 
   img {
     width: 100%;
     height: auto;
-    border: 3px solid lightgrey;
+    border: 2px solid lightgrey;
   }
 `;

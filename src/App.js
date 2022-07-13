@@ -1,7 +1,6 @@
 import {useMemo, useState} from 'react';
 import styled from 'styled-components';
 
-import ToggleBookmark from './components/bookmark';
 import BrandCategoryFilter from './components/brandCategoryFilter';
 import ColorCategoryFilter from './components/colorCategoryFilter';
 import ImageContainer from './components/imageContainer';
@@ -11,6 +10,7 @@ export default function App() {
   const [garments] = useState(data);
   const [colorList, setColorList] = useState();
   const [brandList, setBrandList] = useState();
+  const [favorite, setFavorite] = useState([]);
 
   function handleColorChange(event) {
     setColorList(event.target.value);
@@ -36,19 +36,17 @@ export default function App() {
   let filteredColorList = useMemo(getFilteredColorList, [colorList, garments]);
   let filteredBrandList = useMemo(getFilteredBrandList, [brandList, garments]);
 
-  function toggleBookmark() {
-    
-  }
+  const addToFavorites = id => {
+    if (!favorite.includes(id)) setFavorite(favorite.concat(id));
+  };
 
   return (
     <AppContainer>
       <Title>My minimalist wardrobe</Title>
       <ColorCategoryFilter onColorChange={handleColorChange} />
       <BrandCategoryFilter onBrandChange={handleBrandChange} />
-      <ToggleBookmark onToggleBookmark={toggleBookmark} />
 
-      <ImageContainer garments={filteredColorList} />
-      <ImageContainer garments={filteredBrandList} />
+      <ImageContainer garments={filteredColorList} favorite={favorite} onAddToFavorites={addToFavorites} />
     </AppContainer>
   );
 }
@@ -60,4 +58,6 @@ const AppContainer = styled.main`
 
 const Title = styled.h1`
   font-size: 2rem;
+  text-decoration: underline;
+  color: grey;
 `;

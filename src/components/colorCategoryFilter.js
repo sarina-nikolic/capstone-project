@@ -16,5 +16,5 @@ const StyledCategories = styled.form`
   margin: 0.5rem;
   padding: 0.5rem;
   display: flex;
-  justify-content: space-evenly;
+  align-items: row;
 `;
