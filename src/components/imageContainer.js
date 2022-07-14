@@ -4,26 +4,24 @@ import BookmarkButton from './bookmarkButton';
 
 export default function ImageContainer({garments}) {
   return (
-    <Section>
-      <StyledBox>
-        {garments.map(garment => {
-          return (
-            <>
-              <img key={garment.id} src={garment.image} alt={garment.imgAltText} />
-              <BookmarkButton />
-            </>
-          );
-        })}
-      </StyledBox>
-    </Section>
+    <StyledBox>
+      {garments.map(garment => {
+        return (
+          <GarmentContainer key={garment.id}>
+            <img key={garment.id} src={garment.image} alt={garment.imgAltText} />
+            <BookmarkButton />
+          </GarmentContainer>
+        );
+      })}
+    </StyledBox>
   );
 }
 
-const Section = styled.div`
+const GarmentContainer = styled.div`
   position: relative;
 `;
 
-const StyledBox = styled.div`
+const StyledBox = styled.section`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: start;

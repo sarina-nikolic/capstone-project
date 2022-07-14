@@ -1,7 +1,6 @@
 import {useMemo, useState} from 'react';
 import styled from 'styled-components';
 
-import BrandCategoryFilter from './components/brandCategoryFilter';
 import ColorCategoryFilter from './components/colorCategoryFilter';
 import ImageContainer from './components/imageContainer';
 import data from './garmentsData';
@@ -26,7 +25,7 @@ export default function App() {
     return garments.filter(item => item.color === colorList);
   }
 
-  function getFilteredBrandList() {
+ function getFilteredBrandList() {
     if (!brandList) {
       return garments;
     }
@@ -34,7 +33,7 @@ export default function App() {
   }
 
   let filteredColorList = useMemo(getFilteredColorList, [colorList, garments]);
-  let filteredBrandList = useMemo(getFilteredBrandList, [brandList, garments]);
+ // let filteredBrandList = useMemo(getFilteredBrandList, [brandList, garments]);
 
   const addToFavorites = id => {
     if (!favorite.includes(id)) setFavorite(favorite.concat(id));
@@ -43,10 +42,9 @@ export default function App() {
   return (
     <AppContainer>
       <Title>My minimalist wardrobe</Title>
-      <ul>
+
       <ColorCategoryFilter onColorChange={handleColorChange} />
-      <BrandCategoryFilter onBrandChange={handleBrandChange} />
-      </ul>
+
       <ImageContainer garments={filteredColorList} favorite={favorite} onAddToFavorites={addToFavorites} />
     </AppContainer>
   );
