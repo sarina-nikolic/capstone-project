@@ -22,7 +22,7 @@ const garments = [
     image: '/images/stripedshirt.jpg',
     imgAltText: 'striped shirt',
     size: '34',
-    color: 'blue white striped',
+    color: 'lightblue',
     material: 'cotton',
     brand: 'Ralph Lauren',
   },

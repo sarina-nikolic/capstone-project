@@ -1,32 +1,33 @@
 import {useMemo, useState} from 'react';
 import styled from 'styled-components';
 
-import Categories from './components/categories';
-import ImageContainer from './components/imageContainer';
+import ColorCategoryFilter from './components/ColorCategoryFilter';
+import ImageContainer from './components/ImageContainer';
 import data from './garmentsData';
 
 export default function App() {
   const [garments] = useState(data);
-
   const [colorList, setColorList] = useState();
 
   function handleColorChange(event) {
     setColorList(event.target.value);
   }
 
-  function getFilteredList() {
+  function getFilteredColorList() {
     if (!colorList) {
       return garments;
     }
     return garments.filter(item => item.color === colorList);
   }
 
-  let filteredColorList = useMemo(getFilteredList, [colorList, garments]);
+  let filteredColorList = useMemo(getFilteredColorList, [colorList, garments]);
 
   return (
     <AppContainer>
       <Title>My minimalist wardrobe</Title>
-      <Categories onColorChange={handleColorChange} />
+
+      <ColorCategoryFilter onColorChange={handleColorChange} />
+
       <ImageContainer garments={filteredColorList} />
     </AppContainer>
   );
@@ -39,4 +40,6 @@ const AppContainer = styled.main`
 
 const Title = styled.h1`
   font-size: 2rem;
+  text-decoration: underline;
+  color: grey;
 `;
