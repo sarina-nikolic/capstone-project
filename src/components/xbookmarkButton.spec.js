@@ -2,7 +2,7 @@ import {userEvent} from '@storybook/testing-library';
 import '@testing-library/jest-dom';
 import {render, screen} from '@testing-library/react';
 
-import BookmarkButton from './bookmarkButton';
+import BookmarkButton from './xbookmarkButton';
 
 describe('every image has its own toggleable bookmark button', () => {
   it('renders all bookmarks', () => {

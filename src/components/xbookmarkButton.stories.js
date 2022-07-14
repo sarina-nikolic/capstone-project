@@ -1,4 +1,4 @@
-import BookmarkButton from './bookmarkButton';
+import BookmarkButton from './xbookmarkButton';
 
 export default {
   title: 'component/BookmarkButton',

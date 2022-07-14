@@ -1,8 +1,8 @@
 import {useMemo, useState} from 'react';
 import styled from 'styled-components';
 
-import ColorCategoryFilter from './components/colorCategoryFilter';
-import ImageContainer from './components/imageContainer';
+import ColorCategoryFilter from './components/xcolorCategoryFilter';
+import ImageContainer from './components/ximageContainer';
 import data from './garmentsData';
 
 export default function App() {
