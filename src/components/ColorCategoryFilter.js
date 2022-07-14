@@ -7,22 +7,11 @@ export default function ColorCategoryFilter({onColorChange}) {
         <option value="">color</option>
         <option value="navy">navy</option>
         <option value="white">white</option>
+        <option value="lightblue">lightblue</option>
       </select>
     </StyledCategories>
   );
 }
-
-// return (
-//<StyledCategories>
-//  <select name="brand-list" id="brand-list" onChange={onBrandChange}>
-//   <option value="">brand</option>
-//    <option value="&other stories">&other stories</option>
-//    <option value="Tommy Hilfiger">Tommy Hilfiger</option>
-//    <option value="Ralph Lauren">Ralph Lauren</option>
-//    <option value="H&M">H&M</option>
-//  </select>
-//</StyledCategories>;
-//);
 
 const StyledCategories = styled.form`
   margin: 0.5rem;
