@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import BookmarkButton from './xbookmarkButton';
+import BookmarkButton from './BookmarkButton';
 
 export default function ImageContainer({garments}) {
   return (
