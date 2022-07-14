@@ -25,9 +25,7 @@ export default function App() {
   return (
     <AppContainer>
       <Title>My minimalist wardrobe</Title>
-
       <ColorCategoryFilter onColorChange={handleColorChange} />
-
       <ImageContainer garments={filteredColorList} />
     </AppContainer>
   );
