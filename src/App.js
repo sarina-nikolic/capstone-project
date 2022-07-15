@@ -1,4 +1,4 @@
-import {useEffect, useMemo, useState} from 'react';
+import {useState} from 'react';
 import styled from 'styled-components';
 
 import CategoryFilter from './components/CategoryFilter';
@@ -34,7 +34,6 @@ export default function App() {
       return false;
     }
   });
-
 
   return (
     <AppContainer>
