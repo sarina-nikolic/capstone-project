@@ -1,7 +1,7 @@
 import {useMemo, useState} from 'react';
 import styled from 'styled-components';
 
-import ColorCategoryFilter from './components/ColorCategoryFilter';
+import CategoryFilter from './components/CategoryFilter';
 import ImageContainer from './components/ImageContainer';
 import data from './garmentsData';
 
@@ -25,7 +25,7 @@ export default function App() {
   return (
     <AppContainer>
       <Title>My minimalist wardrobe</Title>
-      <ColorCategoryFilter onColorChange={handleColorChange} />
+      <CategoryFilter onColorChange={handleColorChange} />
       <ImageContainer garments={filteredColorList} />
     </AppContainer>
   );

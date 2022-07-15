@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export default function ColorCategoryFilter({onColorChange}) {
+export default function CategoryFilter({onColorChange}) {
   return (
     <StyledCategories>
       <select name="color-list" id="color-list" onChange={onColorChange}>
@@ -8,6 +8,13 @@ export default function ColorCategoryFilter({onColorChange}) {
         <option value="navy">navy</option>
         <option value="white">white</option>
         <option value="lightblue">lightblue</option>
+      </select>
+      <select name="brand-list" id="brand-list">
+        <option value="">brand</option>
+        <option value="&other stories">&other stories</option>
+        <option value="Tommy Hilfiger">Tommy Hilfiger</option>
+        <option value="Ralph Lauren">Ralph Lauren</option>
+        <option value="H&M">H&M</option>
       </select>
     </StyledCategories>
   );
