@@ -8,7 +8,7 @@ export default function ImageContainer({garments}) {
       {garments.map(garment => {
         return (
           <GarmentContainer key={garment.id}>
-            <img key={garment.id} src={garment.image} alt={garment.imgAltText} />
+            <img src={garment.image} alt={garment.imgAltText} />
             <BookmarkButton />
           </GarmentContainer>
         );

@@ -1,4 +1,4 @@
-import {useMemo, useState} from 'react';
+import {useEffect, useMemo, useState} from 'react';
 import styled from 'styled-components';
 
 import CategoryFilter from './components/CategoryFilter';
@@ -6,27 +6,41 @@ import ImageContainer from './components/ImageContainer';
 import data from './garmentsData';
 
 export default function App() {
-  const [garments] = useState(data);
-  const [colorList, setColorList] = useState();
+  const [garments, setGarments] = useState(data);
+  const [filterList, setFilterList] = useState({
+    color: 'all',
+    brand: 'all',
+  });
 
-  function handleColorChange(event) {
-    setColorList(event.target.value);
-  }
-
-  function getFilteredColorList() {
-    if (!colorList) {
-      return garments;
+  function handleFilterChange(event, filterKeyToChange) {
+    if (filterKeyToChange === 'color') {
+      setFilterList({...filterList, color: event.target.value});
     }
-    return garments.filter(item => item.color === colorList);
+    if (filterKeyToChange === 'brand') {
+      setFilterList({...filterList, brand: event.target.value});
+    }
   }
 
-  let filteredColorList = useMemo(getFilteredColorList, [colorList, garments]);
+  let filteredList = garments.filter(garment => {
+    if (filterList.color === 'all' && filterList.brand === 'all') {
+      return true;
+    } else if (filterList.color === 'all' && filterList.brand === garment.brand) {
+      return true;
+    } else if (filterList.color === garment.color && filterList.brand === 'all') {
+      return true;
+    } else if (filterList.color === garment.color && filterList.brand === garment.brand) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+
 
   return (
     <AppContainer>
       <Title>My minimalist wardrobe</Title>
-      <CategoryFilter onColorChange={handleColorChange} />
-      <ImageContainer garments={filteredColorList} />
+      <CategoryFilter onFilterChange={handleFilterChange} />
+      <ImageContainer garments={filteredList} />
     </AppContainer>
   );
 }
