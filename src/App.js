@@ -1,9 +1,11 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import styled from 'styled-components';
 
+import BookmarkButton from './components/BookmarkButton';
 import CategoryFilter from './components/CategoryFilter';
 import ImageContainer from './components/ImageContainer';
 import data from './garmentsData';
+import {setToLocal, getFromLocal} from './lib/localStorage.js';
 
 export default function App() {
   const [garments, setGarments] = useState(data);
@@ -11,6 +13,9 @@ export default function App() {
     color: 'all',
     brand: 'all',
   });
+  const [garment, setGarment] = useState(getFromLocal('garment') ?? data);
+
+  useEffect(() => setToLocal('garment', garment), [garment]);
 
   function handleFilterChange(event, filterKeyToChange) {
     if (filterKeyToChange === 'color') {
@@ -34,6 +39,19 @@ export default function App() {
       return false;
     }
   });
+
+  const likedGarment = garment.filter(garment => garment.isLiked);
+
+  function BookmarkButton(id) {
+    const index = garment.findIndex(garment => garment._id === id);
+    const newFavorite = garment.find(garment => garment._id === id);
+    const tempFavorites = [
+      ...garment.slice(0, index),
+      {...newFavorite, isLiked: !newFavorite.isLiked},
+      ...garment.slice(index + 1),
+    ];
+    setGarment(tempFavorites);
+  }
 
   return (
     <AppContainer>
