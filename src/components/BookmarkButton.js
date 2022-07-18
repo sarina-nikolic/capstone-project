@@ -25,6 +25,6 @@ const StyledBookmark = styled.button`
 `;
 
 const StyledBookmarkHeart = styled(FaHeart)`
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: ${({active}) => (active ? '#5882FA' : '#FFFFFF')};
 `;

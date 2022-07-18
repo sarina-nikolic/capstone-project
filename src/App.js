@@ -1,9 +1,12 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import styled from 'styled-components';
 
-import CategoryFilter from './components/CategoryFilter';
-import ImageContainer from './components/ImageContainer';
+//import BookmarkButton from './components/BookmarkButton';
+
+import Navigation from './components/Navigation';
 import data from './garmentsData';
+import {setToLocal, getFromLocal} from './lib/localStorage.js';
+import Home from './pages/Home';
 
 export default function App() {
   const [garments, setGarments] = useState(data);
@@ -11,6 +14,9 @@ export default function App() {
     color: 'all',
     brand: 'all',
   });
+  const [garment, setGarment] = useState(getFromLocal('garment') ?? data);
+
+  useEffect(() => setToLocal('garment', garment), [garment]);
 
   function handleFilterChange(event, filterKeyToChange) {
     if (filterKeyToChange === 'color') {
@@ -37,9 +43,9 @@ export default function App() {
 
   return (
     <AppContainer>
+      <Navigation />
       <Title>My minimalist wardrobe</Title>
-      <CategoryFilter onFilterChange={handleFilterChange} />
-      <ImageContainer garments={filteredList} />
+      <Home onFilterChange={handleFilterChange} garments={filteredList} />
     </AppContainer>
   );
 }
