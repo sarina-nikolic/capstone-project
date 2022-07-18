@@ -1,15 +1,13 @@
-import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
+import CategoryFilter from '../components/CategoryFilter';
+import ImageContainer from '../components/ImageContainer';
 
-
-export default function Home() {
+export default function Home({onFilterChange, garments}) {
   return (
     <AppContainer>
-      <Title>My minimalist wardrobe </Title>
-      <NavigationContainer>
-        
-      </NavigationContainer>
+      <CategoryFilter onFilterChange={onFilterChange} />
+      <ImageContainer garments={garments} />
     </AppContainer>
   );
 }
@@ -17,10 +15,4 @@ export default function Home() {
 const AppContainer = styled.main`
   margin: 1rem;
   text-align: center;
-`;
-
-const Title = styled.h1`
-  font-size: 2rem;
-  text-decoration: underline;
-  color: grey;
 `;

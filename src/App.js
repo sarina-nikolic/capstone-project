@@ -2,10 +2,11 @@ import {useEffect, useState} from 'react';
 import styled from 'styled-components';
 
 //import BookmarkButton from './components/BookmarkButton';
-import CategoryFilter from './components/CategoryFilter';
-import ImageContainer from './components/ImageContainer';
+
+import Navigation from './components/Navigation';
 import data from './garmentsData';
 import {setToLocal, getFromLocal} from './lib/localStorage.js';
+import Home from './pages/Home';
 
 export default function App() {
   const [garments, setGarments] = useState(data);
@@ -40,24 +41,11 @@ export default function App() {
     }
   });
 
- /* const likedGarment = garment.filter(garment => garment.isLiked);
-
-  function BookmarkButton(id) {
-    const index = garment.findIndex(garment => garment._id === id);
-    const newFavorite = garment.find(garment => garment._id === id);
-    const tempFavorites = [
-      ...garment.slice(0, index),
-      {...newFavorite, isLiked: !newFavorite.isLiked},
-      ...garment.slice(index + 1),
-    ];
-    setGarment(tempFavorites);
-  } */
-
   return (
     <AppContainer>
+      <Navigation />
       <Title>My minimalist wardrobe</Title>
-      <CategoryFilter onFilterChange={handleFilterChange} />
-      <ImageContainer garments={filteredList} />
+      <Home onFilterChange={handleFilterChange} garments={filteredList} />
     </AppContainer>
   );
 }
