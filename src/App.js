@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react';
 import styled from 'styled-components';
 
-import BookmarkButton from './components/BookmarkButton';
+//import BookmarkButton from './components/BookmarkButton';
 import CategoryFilter from './components/CategoryFilter';
 import ImageContainer from './components/ImageContainer';
 import data from './garmentsData';
