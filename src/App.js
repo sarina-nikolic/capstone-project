@@ -40,7 +40,7 @@ export default function App() {
     }
   });
 
-  const likedGarment = garment.filter(garment => garment.isLiked);
+ /* const likedGarment = garment.filter(garment => garment.isLiked);
 
   function BookmarkButton(id) {
     const index = garment.findIndex(garment => garment._id === id);
@@ -51,7 +51,7 @@ export default function App() {
       ...garment.slice(index + 1),
     ];
     setGarment(tempFavorites);
-  }
+  } */
 
   return (
     <AppContainer>
