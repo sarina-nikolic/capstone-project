@@ -35,6 +35,42 @@ const garments = [
     material: 'cotton',
     brand: 'H&M',
   },
+  {
+    id: '5',
+    image: '/images/reddress.jpg',
+    imgAltText: 'red dress',
+    size: '164',
+    color: 'red',
+    material: 'cotton',
+    brand: 'H&M',
+  },
+  {
+    id: '6',
+    image: '/images/beigeblazer.jpg',
+    imgAltText: 'beige blazer',
+    size: 'XS',
+    color: 'beige',
+    material: 'cotton',
+    brand: 'Zara',
+  },
+  {
+    id: '7',
+    image: '/images/yellowskirt.jpg',
+    imgAltText: 'yellow skirt',
+    size: 'XS',
+    color: 'yellow',
+    material: 'cotton',
+    brand: 'Ralph Lauren',
+  },
+  {
+    id: '8',
+    image: '/images/beigetrousers.jpg',
+    imgAltText: 'beige trousers',
+    size: 'XS',
+    color: 'beige',
+    material: 'cotton',
+    brand: 'H&M',
+  },
 ];
 
 export default garments;
