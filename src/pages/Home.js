@@ -8,7 +8,7 @@ export default function Home() {
     <AppContainer>
       <Title>My minimalist wardrobe </Title>
       <NavigationContainer>
-        <
+        
       </NavigationContainer>
     </AppContainer>
   );
