@@ -5,7 +5,7 @@ import CategoryFilter from './CategoryFilter';
 import ImageContainer from './ImageContainer';
 import Navigation from './Navigation';
 
-export default function Main({garments}) {
+export default function Main({garments, toggleBookmark}) {
   const [filterList, setFilterList] = useState({
     color: 'all',
     brand: 'all',
@@ -44,7 +44,7 @@ export default function Main({garments}) {
         </Header>
       </Title>
       <CategoryFilter onFilterChange={handleFilterChange} />
-      <ImageContainer garments={filteredList} />
+      <ImageContainer garments={filteredList} toggleBookmark={toggleBookmark} />
     </AppContainer>
   );
 }

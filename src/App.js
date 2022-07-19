@@ -8,15 +8,14 @@ import data from './garmentsData';
 import {setToLocal, getFromLocal} from './lib/localStorage.js';
 
 export default function App() {
-  const [garments, setGarments] = useState(data);
+  const [garments, setGarments] = useState(getFromLocal('garments') ?? data);
 
-  const [garment, setGarment] = useState(getFromLocal('garment') ?? data);
-
-  useEffect(() => setToLocal('garment', garment), [garment]);
+  useEffect(() => setToLocal('garments', garments), [garments]);
 
   const likedGarments = garments.filter(garment => garment.isLiked);
+  console.log(likedGarments);
   function toggleBookmark(id) {
-    const index = garments.findIndex(garment => garments.id === id);
+    const index = garments.findIndex(garment => garment.id === id);
     const newFavorite = garments.find(garment => garment.id === id);
     const actualFavorites = [
       ...garments.slice(0, index),
@@ -30,8 +29,8 @@ export default function App() {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/main" element={<Main garments={garments} />} />
-        <Route path="/favorites" element={<FavoritesPage />} />
+        <Route path="/main" element={<Main garments={garments} toggleBookmark={toggleBookmark} />} />
+        <Route path="/favorites" element={<FavoritesPage garments={likedGarments} />} />
       </Routes>
     </>
   );

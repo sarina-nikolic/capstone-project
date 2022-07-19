@@ -2,16 +2,17 @@ import {useState} from 'react';
 import {FaHeart} from 'react-icons/fa';
 import styled from 'styled-components';
 
-export default function BookmarkButton() {
+export default function BookmarkButton({toggleBookmark, id, isLiked}) {
   const [isBookmarked, setIsBookmarked] = useState(false);
 
   function onToggleBookmark() {
     setIsBookmarked(!isBookmarked);
+    toggleBookmark(id);
   }
 
   return (
     <StyledBookmark onClick={onToggleBookmark}>
-      {isBookmarked ? <StyledBookmarkHeart active="true" /> : <StyledBookmarkHeart />}
+      {isLiked ? <StyledBookmarkHeart active="true" /> : <StyledBookmarkHeart />}
     </StyledBookmark>
   );
 }

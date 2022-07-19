@@ -2,14 +2,14 @@ import styled from 'styled-components';
 
 import BookmarkButton from './BookmarkButton';
 
-export default function ImageContainer({garments}) {
+export default function ImageContainer({garments, toggleBookmark}) {
   return (
     <StyledBox>
       {garments.map(garment => {
         return (
           <GarmentContainer key={garment.id}>
             <img src={garment.image} alt={garment.imgAltText} />
-            <BookmarkButton />
+            <BookmarkButton toggleBookmark={toggleBookmark} id={garment.id} isLiked={garment.isLiked} />
           </GarmentContainer>
         );
       })}
