@@ -16,5 +16,6 @@ export default function FavoritesPage({garments}) {
 }
 
 const Heading = styled.h1`
-  color: hotpink;
+  font-size: 2rem;
+  color: grey;
 `;
