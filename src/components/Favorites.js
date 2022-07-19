@@ -1,10 +1,12 @@
 //import {FaHeart} from 'react-icons/fa';
 import styled from 'styled-components';
 
+import Navigation from './Navigation';
+
 //import BookmarkButton from '../components/BookmarkButtonBookmarkButton';
 
 export default function FavoritesPage({onToggleBookmark}) {
-  const likedGarments = garments.filter(garment => garment.isLiked);
+  /* const likedGarments = garments.filter(garment => garment.isLiked);
   function toggleBookmark(id) {
     const index = garments.findIndex(garment => garments.id === id);
     const newFavorite = garments.find(garment => garment.id === id);
@@ -15,8 +17,14 @@ export default function FavoritesPage({onToggleBookmark}) {
     ];
     setGarments(actualFavorites);
   }
+*/
 
-  return <Heading>My favorites</Heading>;
+  return (
+    <>
+      <Heading>My favorites</Heading>
+      <Navigation />
+    </>
+  );
 }
 
 const Heading = styled.h1`
