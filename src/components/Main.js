@@ -1,22 +1,15 @@
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 import styled from 'styled-components';
 
-import data from '../garmentsData';
-import {setToLocal, getFromLocal} from '../lib/localStorage.js';
-
+import CategoryFilter from './CategoryFilter';
 import ImageContainer from './ImageContainer';
 import Navigation from './Navigation';
 
-export default function App() {
-  const [garments, setGarments] = useState(data);
+export default function Main({garments}) {
   const [filterList, setFilterList] = useState({
     color: 'all',
     brand: 'all',
   });
-
-  const [garment, setGarment] = useState(getFromLocal('garment') ?? data);
-
-  useEffect(() => setToLocal('garment', garment), [garment]);
 
   function handleFilterChange(event, filterKeyToChange) {
     if (filterKeyToChange === 'color') {
@@ -41,18 +34,6 @@ export default function App() {
     }
   });
 
-  const likedGarments = garments.filter(garment => garment.isLiked);
-  function toggleBookmark(id) {
-    const index = garments.findIndex(garment => garments.id === id);
-    const newFavorite = garments.find(garment => garment.id === id);
-    const actualFavorites = [
-      ...garments.slice(0, index),
-      {...newFavorite, isLiked: !newFavorite.isLiked},
-      ...garments.slice(index + 1),
-    ];
-    setGarments(actualFavorites);
-  }
-
   return (
     <AppContainer>
       <Navigation />
@@ -62,7 +43,8 @@ export default function App() {
           re:use <br /> re:wear <br /> re:love
         </Header>
       </Title>
-      <ImageContainer onFilterChange={handleFilterChange} garments={filteredList} />
+      <CategoryFilter onFilterChange={handleFilterChange} />
+      <ImageContainer garments={filteredList} />
     </AppContainer>
   );
 }
