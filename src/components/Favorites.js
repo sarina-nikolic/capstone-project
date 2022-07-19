@@ -1,4 +1,3 @@
-//import {FaHeart} from 'react-icons/fa';
 import styled from 'styled-components';
 
 import ImageContainer from './ImageContainer';

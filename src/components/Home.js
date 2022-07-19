@@ -1,4 +1,3 @@
-import {TbHanger} from 'react-icons/tb';
 import {NavLink} from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -38,9 +37,4 @@ const Title = styled.h1`
 
 const Header = styled.p`
   font-size: 0.8rem;
-`;
-
-const HangerIcon = styled(TbHanger)`
-  font-size: 3rem;
-  color: grey;
 `;
