@@ -34,7 +34,7 @@ const NavigationsContainer = styled.nav`
   left: 0;
   border: 2px solid lightgrey;
   border-radius: 0.2rem;
-  background-color: lightblue;
+  background-color: #a9d0f5;
 `;
 
 const StyledNavigationsLink = styled(NavLink)`

@@ -4,8 +4,6 @@ import styled from 'styled-components';
 import ImageContainer from './ImageContainer';
 import Navigation from './Navigation';
 
-//import BookmarkButton from '../components/BookmarkButtonBookmarkButton';
-
 export default function FavoritesPage({garments}) {
   return (
     <>
