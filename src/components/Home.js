@@ -13,17 +13,16 @@ export default function Home() {
           re:use <br /> re:wear <br /> re:love
         </Header>
       </Title>
-      <NavLink to="/">
+      <NavLink to="/main">
         <img src={icon} alt="blue silk" />
-        <HangerIcon />
       </NavLink>
     </StyledHome>
   );
 }
 
 const StyledHome = styled.div`
-  margin: auto;
   font-size: 2rem;
+
   img {
     width: 100%;
     height: auto;
@@ -41,4 +40,7 @@ const Header = styled.p`
   font-size: 0.8rem;
 `;
 
-const HangerIcon = styled(TbHanger)``;
+const HangerIcon = styled(TbHanger)`
+  font-size: 3rem;
+  color: grey;
+`;
