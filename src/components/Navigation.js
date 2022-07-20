@@ -25,7 +25,6 @@ export default function Navigation() {
 const NavigationsContainer = styled.nav`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-
   z-index: 1;
   place-items: center;
   position: fixed;
