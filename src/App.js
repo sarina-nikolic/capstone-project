@@ -8,12 +8,11 @@ import data from './garmentsData';
 import {setToLocal, getFromLocal} from './lib/localStorage.js';
 
 export default function App() {
-  const [garments] = useState(getFromLocal('garments') ?? data);
+  const [garments, setGarments] = useState(getFromLocal('garments') ?? data);
 
   useEffect(() => setToLocal('garments', garments), [garments]);
 
   const likedGarments = garments.filter(garment => garment.isLiked);
-  console.log(likedGarments);
   function toggleBookmark(id) {
     const index = garments.findIndex(garment => garment.id === id);
     const newFavorite = garments.find(garment => garment.id === id);
