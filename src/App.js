@@ -8,7 +8,7 @@ import data from './garmentsData';
 import {setToLocal, getFromLocal} from './lib/localStorage.js';
 
 export default function App() {
-  const [garments, setGarments] = useState(getFromLocal('garments') ?? data);
+  const [garments] = useState(getFromLocal('garments') ?? data);
 
   useEffect(() => setToLocal('garments', garments), [garments]);
 
