@@ -27,5 +27,6 @@ const StyledBookmark = styled.button`
 
 const StyledBookmarkHeart = styled(FaHeart)`
   font-size: 1.2rem;
-  color: ${({active}) => (active ? '#a9d0f5' : '#FFFFFF')};
+  color: ${({active}) => (active ? '#1E90FF' : '#FFFFFF')};
+  filter: drop-shadow(2px 2px 2px rgb(0 0 0 / 0.2));
 `;
