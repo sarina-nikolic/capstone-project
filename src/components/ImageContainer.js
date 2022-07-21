@@ -25,11 +25,12 @@ const StyledBox = styled.section`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: start;
-  gap: 0.5rem;
+  gap: 0.3rem;
 
   img {
     width: 100%;
     height: auto;
     border: 2px solid lightgrey;
+    border-radius: 5px;
   }
 `;

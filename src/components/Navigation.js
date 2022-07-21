@@ -39,19 +39,22 @@ const NavigationsContainer = styled.nav`
 const StyledNavigationsLink = styled(NavLink)`
   margin: 0.2rem;
   padding: 0.1rem;
+  color: white;
+
+  &.active {
+    animation: 1s linear;
+    color: #1e90ff;
+  }
 `;
 
 const MainIcon = styled(AiFillHome)`
   font-size: 2rem;
-  color: white;
 `;
 
 const HeartIcon = styled(FaHeart)`
   font-size: 1.8rem;
-  color: white;
 `;
 
 const AddIcon = styled(AiFillPlusCircle)`
   font-size: 2rem;
-  color: white;
 `;

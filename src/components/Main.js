@@ -61,4 +61,5 @@ const Header = styled.p`
 
 const AppContainer = styled.main`
   margin: 1rem;
+  margin-bottom: 3.5rem;
 `;

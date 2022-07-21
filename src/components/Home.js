@@ -21,6 +21,7 @@ export default function Home() {
 
 const StyledHome = styled.div`
   font-size: 2rem;
+  margin: 1rem;
 
   img {
     width: 100%;

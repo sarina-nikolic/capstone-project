@@ -34,6 +34,5 @@ const StyledCategories = styled.form`
 const Button = styled.select`
   border: 2px solid lightgrey;
   border-radius: 10px;
-  margin: 1rem;
   padding: 0.3rem;
 `;
