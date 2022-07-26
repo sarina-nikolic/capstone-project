@@ -8,9 +8,9 @@ This app was build mobile first, so please switch your browser to responsive mod
 
 ## App impressions
 
-<img src="./public/images/startscreen.png" width=320px />
-<img src="./public/images/my-minimalist-wardrobe.png" width=320px />
-<img src="./public/images/my-favorites.png" width=320px>
+<img src="./public/images/startscreen.png" width=220px />
+<img src="./public/images/my-minimalist-wardrobe.png" width=220px />
+<img src="./public/images/my-favorites.png" width=220px>
 
 ## Tech-Stack
 
