@@ -9,7 +9,7 @@ This app was build mobile first, so please switch your browser to responsive mod
 ## App impressions
 
 <div>
-<img src="./public/images/startscreen.png" height="410px/>
+<img src="./public/images/startscreen.png" width=320px />
 </div>
 
 ## Tech-Stack
