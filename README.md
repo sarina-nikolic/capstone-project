@@ -8,9 +8,9 @@ This app was build mobile first, so please switch your browser to responsive mod
 
 ## App impressions
 
-<div>
 <img src="./public/images/startscreen.png" width=320px />
-</div>
+<img src="./public/images/my-minimalist-wardrobe.png" width=320px />
+<img src="./public/images/my-favorites.png" width=320px>
 
 ## Tech-Stack
 
@@ -29,6 +29,4 @@ This app was build mobile first, so please switch your browser to responsive mod
 
 - clone this repository
 - insall all dependencies `$ npm install`
-- create a local .env file and enter:
-  - a valid email-adress
 - run app in dev mode `$npm start`
