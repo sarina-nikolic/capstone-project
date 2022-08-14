@@ -26,5 +26,5 @@ This app was build mobile first, so please switch your browser to responsive mod
 ## Project Setup
 
 - clone this repository
-- insall all dependencies `$ npm install`
+- install all dependencies `$ npm install`
 - run app in dev mode `$npm start`
